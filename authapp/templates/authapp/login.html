@@ -23,6 +23,11 @@
          Вход через ВКонтакте
         </a>
     </button>
+    <button class="btn btn-round form-control">
+        <a href="{% url 'social:begin' 'github' %}?next=/">
+         Вход через GitHub
+        </a>
+    </button>
 
 
 {% endblock %}
