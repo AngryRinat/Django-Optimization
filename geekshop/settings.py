@@ -34,8 +34,6 @@ ALLOWED_HOSTS = ['*']
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = env.str('SOCIAL_AUTH_VK_OAUTH2_KEY')
 SOCIAL_AUTH_VK_OAUTH2_SECRET = env.str('SOCIAL_AUTH_VK_OAUTH2_SECRET')
-SOCIAL_AUTH_GITHUB_KEY = env.str('SOCIAL_AUTH_GITHUB_KEY')
-SOCIAL_AUTH_GITHUB_SECRET = env.str('SOCIAL_AUTH_GITHUB_SECRET')
 
 # Application definition
 
@@ -59,9 +57,7 @@ INSTALLED_APPS = [
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.vk.VKOAuth2',
-    'social_core.backends.github.GithubOAuth2',
 )
-
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
 LOGIN_URL = '/auth/login/'
